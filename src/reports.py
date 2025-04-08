@@ -4,6 +4,7 @@ from typing import Optional
 import pandas as pd
 
 from config import TRANSACTION_PATH_EXCEL
+from src.utils import read_excel
 
 logger = logging.getLogger("reports.py")
 file_handler = logging.FileHandler('../logs/reports.log', 'w', encoding="utf8")
@@ -13,11 +14,12 @@ logger.addHandler(file_handler)
 logger.setLevel(logging.DEBUG)
 
 
-def read_excel(filename: str, datetime_to_timestamp: bool = True) -> pd.DataFrame:
-    operations_df = pd.read_excel(filename)
-    if datetime_to_timestamp:
-        operations_df["Дата операции"] = pd.to_datetime(operations_df["Дата операции"], dayfirst=True)
-    return operations_df
+# def read_excel(filename: str, datetime_to_timestamp: bool = True) -> pd.DataFrame:
+#     """Функция для чтения excel файла"""
+#     operations_df = pd.read_excel(filename)
+#     if datetime_to_timestamp:
+#         operations_df["Дата операции"] = pd.to_datetime(operations_df["Дата операции"], dayfirst=True)
+#     return operations_df
 
 
 def spending_by_category(transactions: pd.DataFrame, category: str, date: Optional[str] = None) -> pd.DataFrame:
@@ -25,7 +27,7 @@ def spending_by_category(transactions: pd.DataFrame, category: str, date: Option
     if date is None:
         date = datetime.now()
     else:
-        date = pd.to_datetime(date)
+        date = pd.to_datetime(date, dayfirst=True)
     start_date = date - pd.DateOffset(months=3)
     transactions["Дата операции"] = pd.to_datetime(
         transactions["Дата операции"],
@@ -40,5 +42,6 @@ def spending_by_category(transactions: pd.DataFrame, category: str, date: Option
     return sum_category
 
 
-transactions = read_excel(TRANSACTION_PATH_EXCEL)
-print(spending_by_category(transactions, "Госуслуги", "26.12.2021"))
+if __name__ == "__main__":
+    operation = read_excel(TRANSACTION_PATH_EXCEL)
+    print(spending_by_category(operation, "Наличные", "20.07.2019"))

@@ -39,13 +39,13 @@ def investment_bank(month: str, transactions: List[Dict[str, Any]], limit: int) 
     logger.info(f"Итого отложено в «Инвесткопилку» за {month}: {piggy_bank} руб.")
     return piggy_bank
 
-
-transactions = [
-    {"Дата операции": "2023-10-01", "Сумма операции": 1712},
-    {"Дата операции": "2023-10-05", "Сумма операции": 845},
-    {"Дата операции": "2023-10-10", "Сумма операции": 123},
-    {"Дата операции": "2023-10-15", "Сумма операции": 459},
-]
-savings = investment_bank("2023-10-15", transactions, limit=100)
-savings = json.dumps(savings)
-print(f"Сумма в копилке: {savings} руб.")
+if __name__ == "__main__":
+    transactions = [
+        {"Дата операции": "2023-10-01", "Сумма операции": 1712},
+        {"Дата операции": "2023-10-05", "Сумма операции": 845},
+        {"Дата операции": "2023-10-10", "Сумма операции": 123},
+        {"Дата операции": "2023-10-15", "Сумма операции": 459},
+    ]
+    savings = investment_bank("2023-10-15", transactions, limit=100)
+    savings = json.dumps(savings)
+    print(f"Сумма в копилке: {savings} руб.")
