@@ -1,3 +1,4 @@
+import json
 import logging
 from datetime import datetime
 from typing import Optional
@@ -44,4 +45,5 @@ def spending_by_category(transactions: pd.DataFrame, category: str, date: Option
 
 if __name__ == "__main__":
     operation = read_excel(TRANSACTION_PATH_EXCEL)
-    print(spending_by_category(operation, "Наличные", "20.07.2019"))
+    total = json.dumps(spending_by_category(operation, "Наличные", "20.07.2019"))
+    print(total)

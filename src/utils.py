@@ -1,18 +1,19 @@
 import json
+import logging
 
-from datetime import datetime, time
+from logging import Logger
 from typing import Any
 
 import pandas as pd
 
 
-
-def read_excel(filename: str, datetime_to_timestamp: bool = True) -> pd.DataFrame:
-    """Функция для чтения excel файла"""
-    operations_df = pd.read_excel(filename)
-    if datetime_to_timestamp:
-        operations_df["Дата операции"] = pd.to_datetime(operations_df["Дата операции"], dayfirst=True)
-    return operations_df
+def reading_transactions_excel(filename: str) -> list[dict]:
+    """Функция чтения Excel файла транзакции"""
+    try:
+        return pd.read_excel(filename).to_dict(orient='records')
+    except (FileNotFoundError, ValueError) as err:
+        print(err)
+        return []
 
 
 def write_json(file_path: str, data: Any) -> None:
@@ -26,15 +27,15 @@ def read_json(file_path: str) -> Any:
         return json.load(f)
 
 
-# def greeting()-> str:
-#     """Функция приветсвия в зависимости от времени суток"""
-#     date_now = datetime.now().time()
-#     if time(hour=22) <= date_now < time(hour=23, minute=59, second=59) or time(hour=0) <= date_now < time(hour=6):
-#         return "Доброй ночи"
-#     elif time(hour=6) <= date_now < time(hour=12):
-#         return "Доброе утро"
-#     elif time(hour=12) <= date_now < time(hour=17):
-#         return "Добрый день"
-#     else:
-#         return "Добрый вечер"
-
+def liggin() -> Logger:
+    """
+    Настройка логирования, для дальнейшего использования в других модулях
+    """
+    logging.basicConfig(
+        level=logging.INFO,
+        format="%(asctime)s - %(levelname)s - %(filename)s:%(lineno)d - %(message)s",
+        filename="utils_log.txt",
+        filemode="w",
+    )
+    logger = logging.getLogger(__name__)
+    return logger

@@ -1,130 +1,160 @@
 {
-    "greeting": "Добрый вечер!",
-    "total_expenses": 2183.78,
+    "greeting": "Добрый день!",
+    "total_expenses": 9965776.830000062,
     "card_data": [
         {
-            "last_digits": "1111",
-            "total_spent": 1800.1000000000001,
-            "cashback": 78.0
+            "last_digits": "7197",
+            "total_spent": 6696536.900000025,
+            "cashback": 45628.0
+        },
+        {
+            "last_digits": "5091",
+            "total_spent": 68850.29999999999,
+            "cashback": 507.0
+        },
+        {
+            "last_digits": "4556",
+            "total_spent": 2501133.8999999994,
+            "cashback": 9075.0
+        },
+        {
+            "last_digits": "1112",
+            "total_spent": 53207.0,
+            "cashback": 0.0
+        },
+        {
+            "last_digits": "5507",
+            "total_spent": 84000.0,
+            "cashback": 0.0
+        },
+        {
+            "last_digits": "6002",
+            "total_spent": 69200.0,
+            "cashback": 0.0
+        },
+        {
+            "last_digits": "5441",
+            "total_spent": 492854.69999999995,
+            "cashback": 0.0
         }
     ],
     "top_transactions": [
         {
-            "date_operation": "12.05.2024 13:52:28",
-            "data_payment": "12.05.2024",
-            "card_number": NaN,
-            "status": "OK",
-            "transaction_amount": 500.0,
-            "currency_operation": "RUB",
-            "payment_amount": 500.0,
-            "payment_currency": "RUB",
-            "cashback": 350.0,
-            "category": "Бонусы",
+            "Дата операции": "21.03.2019 17:01:38",
+            "Дата платежа": "21.03.2019",
+            "Номер карты": NaN,
+            "Статус": "OK",
+            "Сумма операции": 190044.51,
+            "Валюта операции": "RUB",
+            "Сумма платежа": 190044.51,
+            "Валюта платежа": "RUB",
+            "Кэшбэк": NaN,
+            "Категория": "Переводы",
             "MCC": NaN,
-            "description": "Выплата по акции",
-            "bonuses_including_cashback": 350,
-            "rounding_investment_bank": 0,
-            "amount_rounding_operation": 500.0
+            "Описание": "Перевод Кредитная карта. ТП 10.2 RUR",
+            "Бонусы (включая кэшбэк)": 0,
+            "Округление на инвесткопилку": 0,
+            "Сумма операции с округлением": 190044.51
         },
         {
-            "date_operation": "11.05.2024 12:13:49",
-            "data_payment": "11.05.2024",
-            "card_number": "*1111",
-            "status": "OK",
-            "transaction_amount": 500.0,
-            "currency_operation": "RUB",
-            "payment_amount": 500.0,
-            "payment_currency": "RUB",
-            "cashback": NaN,
-            "category": "Переводы",
+            "Дата операции": "23.10.2018 12:26:15",
+            "Дата платежа": "23.10.2018",
+            "Номер карты": NaN,
+            "Статус": "OK",
+            "Сумма операции": 177506.03,
+            "Валюта операции": "RUB",
+            "Сумма платежа": 177506.03,
+            "Валюта платежа": "RUB",
+            "Кэшбэк": NaN,
+            "Категория": "Переводы",
             "MCC": NaN,
-            "description": "Ilya A.",
-            "bonuses_including_cashback": 0,
-            "rounding_investment_bank": 0,
-            "amount_rounding_operation": 500.0
+            "Описание": "Перевод Кредитная карта. ТП 10.2 RUR",
+            "Бонусы (включая кэшбэк)": 0,
+            "Округление на инвесткопилку": 0,
+            "Сумма операции с округлением": 177506.03
         },
         {
-            "date_operation": "11.05.2024 18:09:41",
-            "data_payment": "11.05.2024",
-            "card_number": "*1111",
-            "status": "OK",
-            "transaction_amount": 350.0,
-            "currency_operation": "RUB",
-            "payment_amount": 350.0,
-            "payment_currency": "RUB",
-            "cashback": NaN,
-            "category": "Переводы",
+            "Дата операции": "30.12.2021 17:50:17",
+            "Дата платежа": "30.12.2021",
+            "Номер карты": "*4556",
+            "Статус": "OK",
+            "Сумма операции": 174000.0,
+            "Валюта операции": "RUB",
+            "Сумма платежа": 174000.0,
+            "Валюта платежа": "RUB",
+            "Кэшбэк": NaN,
+            "Категория": "Пополнения",
             "MCC": NaN,
-            "description": "Ilya A.",
-            "bonuses_including_cashback": 0,
-            "rounding_investment_bank": 0,
-            "amount_rounding_operation": 350.0
+            "Описание": "Пополнение через Газпромбанк",
+            "Бонусы (включая кэшбэк)": 0,
+            "Округление на инвесткопилку": 0,
+            "Сумма операции с округлением": 174000.0
         },
         {
-            "date_operation": "27.05.2024 06:20:36",
-            "data_payment": "27.05.2024",
-            "card_number": "*1111",
-            "status": "OK",
-            "transaction_amount": 150.0,
-            "currency_operation": "RUB",
-            "payment_amount": 150.0,
-            "payment_currency": "RUB",
-            "cashback": NaN,
-            "category": "Переводы",
-            "MCC": NaN,
-            "description": "Ilya A.",
-            "bonuses_including_cashback": 0,
-            "rounding_investment_bank": 0,
-            "amount_rounding_operation": 150.0
+            "Дата операции": "14.09.2021 14:57:42",
+            "Дата платежа": "14.09.2021",
+            "Номер карты": NaN,
+            "Статус": "OK",
+            "Сумма операции": 150000.0,
+            "Валюта операции": "RUB",
+            "Сумма платежа": 150000.0,
+            "Валюта платежа": "RUB",
+            "Кэшбэк": NaN,
+            "Категория": "Пополнения",
+            "MCC": 6012.0,
+            "Описание": "Перевод с карты",
+            "Бонусы (включая кэшбэк)": 0,
+            "Округление на инвесткопилку": 0,
+            "Сумма операции с округлением": 150000.0
         },
         {
-            "date_operation": "23.05.2024 06:17:24",
-            "data_payment": "23.05.2024",
-            "card_number": NaN,
-            "status": "OK",
-            "transaction_amount": 150.0,
-            "currency_operation": "RUB",
-            "payment_amount": 150.0,
-            "payment_currency": "RUB",
-            "cashback": NaN,
-            "category": "Переводы",
-            "MCC": NaN,
-            "description": "Ilya A.",
-            "bonuses_including_cashback": 0,
-            "rounding_investment_bank": 0,
-            "amount_rounding_operation": 150.0
+            "Дата операции": "31.07.2020 22:27:45",
+            "Дата платежа": "01.08.2020",
+            "Номер карты": NaN,
+            "Статус": "OK",
+            "Сумма операции": 150000.0,
+            "Валюта операции": "RUB",
+            "Сумма платежа": 150000.0,
+            "Валюта платежа": "RUB",
+            "Кэшбэк": NaN,
+            "Категория": "Пополнения",
+            "MCC": 6012.0,
+            "Описание": "Перевод с карты",
+            "Бонусы (включая кэшбэк)": 0,
+            "Округление на инвесткопилку": 0,
+            "Сумма операции с округлением": 150000.0
         }
     ],
     "currency_rates": [
         {
             "currency": "USD",
-            "rate": 87.001605
+            "rate": 81.123954
         },
         {
             "currency": "EUR",
-            "rate": 94.067987
+            "rate": 91.981965
         }
     ],
     "stock_prices": [
         {
             "stock": "AAPL",
-            "price": 229.39500427246094
+            "price": 204.10000610351562
         },
         {
             "stock": "AMZN",
-            "price": 200.57000732421875
+            "price": 188.17999267578125
         },
         {
             "stock": "GOOGL",
-            "price": 191.36000061035156
+            "price": 165.38999938964844
         },
         {
             "stock": "MSFT",
-            "price": 467.3299865722656
+            "price": 439.5
         },
         {
             "stock": "TSLA",
-            "price": 265.6099853515625
+            "price": 284.8500061035156
         }
     ]
 }
