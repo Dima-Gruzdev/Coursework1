@@ -1,7 +1,5 @@
 import json
-import logging
 
-from logging import Logger
 from typing import Any
 
 import pandas as pd
@@ -10,7 +8,8 @@ import pandas as pd
 def reading_transactions_excel(filename: str) -> list[dict]:
     """Функция чтения Excel файла транзакции"""
     try:
-        return pd.read_excel(filename).to_dict(orient='records')
+        transactions_df = pd.read_excel(filename)
+        return transactions_df.to_dict("records")
     except (FileNotFoundError, ValueError) as err:
         print(err)
         return []
@@ -25,17 +24,3 @@ def write_json(file_path: str, data: Any) -> None:
 def read_json(file_path: str) -> Any:
     with open(file_path, "r", encoding="utf-8") as f:
         return json.load(f)
-
-
-def liggin() -> Logger:
-    """
-    Настройка логирования, для дальнейшего использования в других модулях
-    """
-    logging.basicConfig(
-        level=logging.INFO,
-        format="%(asctime)s - %(levelname)s - %(filename)s:%(lineno)d - %(message)s",
-        filename="utils_log.txt",
-        filemode="w",
-    )
-    logger = logging.getLogger(__name__)
-    return logger

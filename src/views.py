@@ -55,7 +55,7 @@ def card_info(card_total: list[dict[str, Any]]) -> list[dict[str, Any]]:
         if isinstance(operation["Номер карты"], str) and operation["Номер карты"].startswith("*"):
             last_digits = operation["Номер карты"][-4:]
             if last_digits not in card_data:
-                card_data[last_digits] = {f"last_digits": last_digits, "total_spent": 0.0, "cashback": 0.0}
+                card_data[last_digits] = {"last_digits": last_digits, "total_spent": 0.0, "cashback": 0.0}
         if operation["Сумма операции"] < 0:
             card_data[last_digits]["total_spent"] += round(operation["Сумма операции"] * -1, 1)
         card_data[last_digits]["cashback"] += operation.get("Бонусы (включая кэшбэк)", 0.0)

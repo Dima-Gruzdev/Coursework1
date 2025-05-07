@@ -3,7 +3,6 @@ import logging
 from datetime import datetime
 from typing import List, Dict, Any
 
-
 logger = logging.getLogger("services.py")
 file_handler = logging.FileHandler('../logs/services.log', 'w', encoding="utf8")
 file_formater = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s: %(message)s')
@@ -38,6 +37,7 @@ def investment_bank(month: str, transactions: List[Dict[str, Any]], limit: int) 
             logger.error(f"Ошибка при обработке транзакции: {e}")
     logger.info(f"Итого отложено в «Инвесткопилку» за {month}: {piggy_bank} руб.")
     return piggy_bank
+
 
 if __name__ == "__main__":
     transactions = [
