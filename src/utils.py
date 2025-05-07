@@ -8,8 +8,7 @@ import pandas as pd
 def reading_transactions_excel(filename: str) -> list[dict]:
     """Функция чтения Excel файла транзакции"""
     try:
-        transactions_df = pd.read_excel(filename)
-        return transactions_df.to_dict("records")
+        return pd.read_excel(filename).to_dict(orient='records')
     except (FileNotFoundError, ValueError) as err:
         print(err)
         return []
