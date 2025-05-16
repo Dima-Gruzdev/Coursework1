@@ -7,7 +7,7 @@ import pandas as pd
 from config import TRANSACTION_PATH_EXCEL
 
 logger = logging.getLogger("reports.py")
-file_handler = logging.FileHandler('../logs/reports.log', 'w', encoding="utf8")
+file_handler = logging.FileHandler('logs/reports.log', 'w', encoding="utf8")
 file_formater = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s: %(message)s')
 file_handler.setFormatter(file_formater)
 logger.addHandler(file_handler)

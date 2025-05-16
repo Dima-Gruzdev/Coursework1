@@ -4,14 +4,14 @@ from datetime import datetime
 from typing import List, Dict, Any
 
 logger = logging.getLogger("services.py")
-file_handler = logging.FileHandler('../logs/services.log', 'w', encoding="utf8")
+file_handler = logging.FileHandler('logs/services.log', 'w', encoding="utf8")
 file_formater = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s: %(message)s')
 file_handler.setFormatter(file_formater)
 logger.addHandler(file_handler)
 logger.setLevel(logging.DEBUG)
 
 
-def investment_bank(month: str, transactions: List[Dict[str, Any]], limit: int) -> json:
+def investment_bank(month: str, transactions: List[Dict[str, Any]], limit: int) -> float:
     """Функция в которой траты будут округляться, и разница между фактической
     суммой трат по карте и суммой округления будет попадать на счет Инвесткопилки."""
     if limit not in {10, 50, 100}:
@@ -46,6 +46,7 @@ if __name__ == "__main__":
         {"Дата операции": "2023-10-10", "Сумма операции": 123},
         {"Дата операции": "2023-10-15", "Сумма операции": 459},
     ]
-    savings = investment_bank("2023-10-15", transactions, limit=100)
+    savings = investment_bank("2023-10-15", transactions, 100)
     savings = json.dumps(savings)
+    print(type(savings))
     print(f"Сумма в копилке: {savings} руб.")
